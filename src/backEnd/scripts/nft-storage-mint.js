@@ -1,13 +1,14 @@
 // https://docs.alchemy.com/alchemy/tutorials/how-to-create-an-nft/how-to-mint-a-nft
 
+var path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './.env') })
+
+
 let PROJECT_ID = process.env.PROJECT_ID;
 let PUBLIC_KEY = process.env.PUBLIC_KEY;
 let PRIVATE_KEY = process.env.PRIVATE_KEY;
 let NFTSTORAGE_APIKEY = process.env.NFTSTORAGE_APIKEY;
-let contractAddress = '0x6b859BC1CCC646E7E49B29466EC62cf3342B50cc';
-
-var path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, './.env') })
+let contractAddress = '0x9147B96fCF0250C3B8e70d674289bC31e494eA6B';
 
 const Web3 = require('web3');
 
@@ -107,7 +108,7 @@ async function handleFileProcessing(files)
           console.log('\nCreating metadata...')
           let metadataJson = JSON.stringify({
               "name": `${/[^.]*/.exec(file)[0]}`,
-              "description": 'Digital Art ' + date + ' -' + fileName,
+              "description": 'Digital Art ' + date1 + ' -' + fileName,
               "image": metadata.data.image.href
             }, null, '\t');
 
