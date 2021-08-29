@@ -18,7 +18,7 @@ class Main extends Component {
         <div className="Main">
           <div
             className="container-fluid mt-5"
-            style={{ color: '#55FF55', backgroundColor: '#1D1D1D' }}
+            style={{ color: '#000000', backgroundColor: 'white' }}
           >
             <br></br>
             <div>
@@ -51,11 +51,6 @@ class Main extends Component {
               />
             </div>
             <br></br>&nbsp;
-            <img
-              src={'https://i.gyazo.com/ed6df2ee521e82ae2498da1af3454c52.png'}
-              style={{ width: '1000px', height: '300px' }}
-              alt="adam"
-            />
             <div className="row">
               <main role="main" className="col-lg-12 d-flex text-center">
                 <div className="content mr-auto ml-auto">
@@ -75,7 +70,7 @@ class Main extends Component {
                               <img
                                 src={`data:image/png;base64,${nft.img}`}
                                 style={{
-                                  border: '1mm ridge #8B8B8B',
+                                  
                                   width: '200px',
                                   height: '300px',
                                 }}
@@ -91,7 +86,7 @@ class Main extends Component {
                               <img
                                 src={`data:image/png;base64,${nft.img}`}
                                 style={{
-                                  border: '1mm ridge #55FF55',
+                                  
                                   width: '200px',
                                   height: '300px',
                                 }}
@@ -105,18 +100,18 @@ class Main extends Component {
                               <tr>
                                 <th
                                   className="text-left"
-                                  style={{ color: '#8B8B8B' }}
+                                  style={{ color: '#000000' }}
                                 >
                                   ID:{' '}
                                 </th>
-                                <th style={{ color: '#FFFFFF' }}>{nft.id}</th>
+                                <th style={{ color: '#000000' }}>{nft.id}</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th
                                   className="text-left"
-                                  style={{ color: '#8B8B8B' }}
+                                  style={{ color: '#000000' }}
                                 >
                                   URI:{' '}
                                 </th>
@@ -125,7 +120,7 @@ class Main extends Component {
                                     href={nft.uri}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    style={{ color: '#55FF55' }}
+                                    style={{ color: '#000000' }}
                                   >
                                     link
                                   </a>
@@ -135,7 +130,7 @@ class Main extends Component {
                                 <tr>
                                   <th
                                     className="text-left"
-                                    style={{ color: '#8B8B8B' }}
+                                    style={{ color: '#000000' }}
                                   >
                                     Owner:
                                   </th>
@@ -158,7 +153,7 @@ class Main extends Component {
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       style={{
-                                        color: '#55FF55',
+                                        color: '#000000',
                                         fontWeight: 'normal',
                                       }}
                                     >
@@ -173,11 +168,11 @@ class Main extends Component {
                                 <tr>
                                   <th
                                     className="text-left"
-                                    style={{ color: '#8B8B8B' }}
+                                    style={{ color: '#000000' }}
                                   >
                                     Price:{' '}
                                   </th>
-                                  <th style={{ color: '#FFFFFF' }}>
+                                  <th style={{ color: '#000000' }}>
                                     {nft.price / 10 ** 18} ETH
                                   </th>
                                 </tr>
@@ -190,9 +185,10 @@ class Main extends Component {
                               type="Success"
                               className="btn btn-block"
                               style={{
-                                border: '1px ridge #8B8B8B',
-                                color: '#8B8B8B',
+                                border: '0.5px ridge #000000',
+                                color: '#000000',
                                 width: '200px',
+                                background: red
                               }}
                               onClick={(e) =>
                                 buyNft(this.props.dispatch, nft.id, nft.price)
@@ -206,9 +202,10 @@ class Main extends Component {
                               type="Success"
                               className="btn btn-block btn-outline"
                               style={{
-                                border: '1px ridge #55FF55',
-                                color: '#55FF55',
+                                border: '0.5px ridge #000000',
+                                color: '#000000',
                                 width: '200px',
+                                background: green
                               }}
                               onClick={(e) =>
                                 buyNft(this.props.dispatch, nft.id, nft.price)
@@ -229,7 +226,7 @@ class Main extends Component {
           <br></br>
           <footer>
             {this.props.contract ? (
-              <div style={{ color: '#8B8B8B', fontSize: '14px' }}>
+              <div style={{ color: '#000000', fontSize: '14px' }}>
                 NFT deployed at:&nbsp;
                 <a
                   href={
@@ -238,7 +235,7 @@ class Main extends Component {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#55FF55' }}
+                  style={{ color: '#000000' }}
                 >
                   {this.props.contract._address}
                 </a>

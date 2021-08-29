@@ -14,8 +14,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav
-        className="navbar navbar-expand-lg rounded-bottom navBorderBottom"
-        style={{ color: '#55FF55', backgroundColor: '#1D1D1D' }}
+        className="navbar navbar-expand-lg rounded-bottom navBorderBottom"        
       >
         {this.props.account ? (
           <div className="collapse navbar-collapse">
@@ -40,7 +39,7 @@ class Navbar extends Component {
                       this.props.network === 'Wrong network' ? (
                         <b>
                           <a
-                            style={{ color: '#55FF55' }}
+                            style={{ color: '#000000' }}
                             href={
                               `https://etherscan.io/address/` +
                               this.props.account
@@ -57,7 +56,7 @@ class Navbar extends Component {
                       ) : (
                         <b>
                           <a
-                            style={{ color: '#55FF55' }}
+                            style={{ color: '#000000' }}
                             href={
                               `https://${this.props.network}.etherscan.io/address/` +
                               this.props.account
@@ -94,7 +93,7 @@ class Navbar extends Component {
                 <button
                   type="Success"
                   className="btn btn-outline btn-block "
-                  style={{ backgroundColor: '#55FF55', color: '#000000' }}
+                  style={{ backgroundColor: '#000000', color: '#000000' }}
                   onClick={async () => {
                     try {
                       await window.ethereum.enable()

@@ -8,7 +8,7 @@ let PROJECT_ID = process.env.PROJECT_ID;
 let PUBLIC_KEY = process.env.PUBLIC_KEY;
 let PRIVATE_KEY = process.env.PRIVATE_KEY;
 let NFTSTORAGE_APIKEY = process.env.NFTSTORAGE_APIKEY;
-let contractAddress = '0x9147B96fCF0250C3B8e70d674289bC31e494eA6B';
+let contractAddress = '0x59925945Cad2b8125614C1F9689359A621DAC94F';
 
 const Web3 = require('web3');
 
@@ -60,9 +60,9 @@ async function mintNFT(tokenURI) {
     'from': PUBLIC_KEY,
     'to': contractAddress,
     'nonce': nonce,
-    'gas': 500000,
+    'gas': 7600000,
     'maxPriorityFeePerGas': 1999999987,
-    'data': nft.methods.mint(tokenURI, web3.utils.toWei('1', 'Ether')).encodeABI()
+    'data': nft.methods.mint(tokenURI, web3.utils.toWei('0.01', 'Ether')).encodeABI()
   };
 
   const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY);
@@ -124,7 +124,7 @@ async function handleFileProcessing(files)
           //  .send({from: accounts[0], gas:3000000})
           await mintNFT(metadata.url);
 
-          const price = web3.utils.toWei('1', 'Ether');
+          const price = web3.utils.toWei('0.01', 'Ether');
           const tokenUri = metadata.url;
 
           nftsData[index] = nftsData[index].slice(0, -2) + `,\n\t"price": ${price},\n\t"uri": "${tokenUri}"\n}` //add price&URI to nftsData

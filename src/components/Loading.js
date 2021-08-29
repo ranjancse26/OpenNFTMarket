@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class Loading extends Component {
   render() {
     return(
-      <div className="loading text-center centered" style={{ color: "#55FF55" }}>
+      <div className="loading text-center centered" style={{ color: "black" }}>
 	      <br></br>
 	      <br></br>
 	      <br></br>
