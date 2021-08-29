@@ -67,7 +67,7 @@ export const loadContract = async (dispatch, web3, netId) => {
     dispatch(contractLoaded(contract))
     return contract
   } catch (e) {
-    window.alert('Wrong network!')
+    window.alert('Wrong network! Please connect with Ropsten network') // TODO - For now, we are considering the TEST Network Only
     console.log('Error, load contract: ', e)
     dispatch(contractLoaded(null))
     return null
