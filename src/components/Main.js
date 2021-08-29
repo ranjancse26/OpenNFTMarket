@@ -188,7 +188,7 @@ class Main extends Component {
                                 border: '0.5px ridge #000000',
                                 color: '#000000',
                                 width: '200px',
-                                background: red
+                                background: red,
                               }}
                               onClick={(e) =>
                                 buyNft(this.props.dispatch, nft.id, nft.price)
@@ -205,7 +205,7 @@ class Main extends Component {
                                 border: '0.5px ridge #000000',
                                 color: '#000000',
                                 width: '200px',
-                                background: green
+                                background: green,
                               }}
                               onClick={(e) =>
                                 buyNft(this.props.dispatch, nft.id, nft.price)
